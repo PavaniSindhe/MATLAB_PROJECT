@@ -1,61 +1,47 @@
-SIGNAL COVERAGE MAPS USING MEASUREMENTS AND MACHINE LEARNING 
+# Signal Coverage Maps Using Measurements and Machine Learning
 
-📑 Project Overview
+## 📌 Overview
+This project explores **signal coverage mapping** by combining:
+- **Theoretical Models**: LDPL, Ordinary Kriging (OK), Kriging with Detrending (OKD)  
+- **Machine Learning Models**: Linear Regression, Support Vector Regression (SVR), Random Forests  
 
-Focus: Generating signal coverage maps using theoretical models (LDPL, Ordinary Kriging, OKD) and machine learning models (Linear Regression, SVR, Random Forest).
+The goal is to improve wireless coverage prediction by addressing the **limitations of purely theoretical models** using **real-world data and ML techniques**.
 
-Goal: Compare prediction accuracy, interpretability, and adaptability of both approaches for wireless networks.
+---
 
-🎯 Problem & Objectives
+## 🎯 Problem & Objectives
+### Problem
+Predicting wireless signal coverage is difficult due to terrain, obstructions, and interference.  
+- Theoretical models → Simple, interpretable but limited.  
+- Empirical approaches → Rigid and less adaptive.  
 
-Problem:
+### Objectives
+1. Implement theoretical signal propagation models.  
+2. Collect and preprocess real-world RSSI and GPS data.  
+3. Train ML models for prediction.  
+4. Compare theoretical vs. ML models (accuracy, efficiency).  
+5. Generate and visualize coverage maps.
 
-Predicting wireless signal coverage is challenging due to environmental factors like terrain, obstructions, and interference.
+---
 
-Pure theoretical models oversimplify; traditional empirical models lack adaptability.
+## ⚙️ Methodology
+1. **Theoretical Models:** LDPL, OK, OKD in MATLAB.  
+2. **Data Collection:** RSSI + GPS + environmental attributes.  
+3. **Preprocessing:**  
+   - Handle missing values, outliers  
+   - Normalize data  
+   - Feature engineering (lat/lon, building density, vegetation, time)  
+4. **Machine Learning:**  
+   - Models: Linear Regression, SVM, Decision Trees, Random Forest  
+   - Validation: k-fold cross-validation  
+5. **Evaluation Metrics:** RMSE, MAE, R²  
+6. **Visualization:** MATLAB heatmaps & geospatial plots  
 
-Objectives:
+---
 
-Implement theoretical propagation models.
+## 📊 Results
+- **ML models achieved lower RMSE** than theoretical models.  
+- Heatmaps showed better alignment of ML predictions with actual measurements.  
+- Visualizations: histograms, scatter plots, 3D plots, and coverage maps.  
 
-Collect real-world measurement data (RSSI, GPS, environment).
-
-Train machine learning models.
-
-Compare accuracy and computational efficiency.
-
-Generate signal coverage maps using both approaches.
-
-⚙️ Methodology
-
-Theoretical Models: LDPL, OK, OKD implemented in MATLAB.
-
-Data Collection: Real-world RSSI measurements with GPS coordinates.
-
-Preprocessing:
-
-Handle missing values & outliers.
-
-Normalize numerical/categorical features.
-
-Feature engineering (lat, lon, building density, vegetation, time).
-
-Machine Learning:
-
-Models: Linear Regression, SVM, Decision Trees, Random Forest.
-
-Validation: k-fold cross-validation.
-
-Evaluation Metrics: RMSE, MAE, R².
-
-Visualization: MATLAB Mapping Toolbox for coverage heatmaps.
-
-📊 Results
-
-Histograms, scatter plots, and boxplots illustrate RSSI distribution.
-
-Heatmaps compare LDPL, OK, OKD coverage maps.
-
-Machine learning showed lower RMSE than theoretical models.
-
-Final maps: ML predictions were closer to actual measurements.
+---
